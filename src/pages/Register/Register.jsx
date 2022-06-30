@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Button from '../components/Button/Button';
-import InputField from '../components/InputField/InputField';
-import Container from '../components/Container/Container';
-import { postData } from '../utils/helper';
+import Button from '../../components/Button/Button';
+import InputField from '../../components/InputField/InputField';
+import Container from '../../components/Container/Container';
+import { postData } from '../../utils/helper';
 
 const Register = () => {
   const [email, setEmail] = useState();
@@ -75,7 +75,7 @@ const Register = () => {
 
   return (
     <>
-      <Container title='Register' color='#000000a5'>
+      <Container title='Register' color='#000000de'>
         {loading && (
           <h2 style={{ color: 'white', size: 'large' }}>Loading...</h2>
         )}

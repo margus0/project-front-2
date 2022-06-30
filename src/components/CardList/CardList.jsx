@@ -1,32 +1,50 @@
-import React, { useEffect, useState } from 'react';
-import Card from '../Card/Card';
+import React, { useEffect } from 'react';
+// import Card from '../Card/Card';
 import PropTypes from 'prop-types';
 import * as S from './CardList.style';
-import { getData } from '../../utils/helper';
+import axios from 'axios';
+import axiosRetry from 'axios-retry';
 
-function CardList({ category }) {
-  const [data, setData] = useState([]);
+function CardList() {
+  // const [data, setData] = useState([]);
+  axiosRetry(axios, { retries: 3 });
 
-  async function renderData() {
-    const token = localStorage.getItem('token');
-    const resp = await getData('auth/items ', token);
-    setData(resp.data);
+  // useEffect(() => {
+  //   renderData();
+  // }, []);
+
+  // const fileterData = data.filter((items) => {
+  //   if (category === 'All') {
+  //     return items;
+  //   }
+  // //   return items.category === category;
+
+  async function getData() {
+    try {
+      const response = await axios.get(
+        'https://renewable-pc-games-data.p.rapidapi.com/games/1/',
+        {
+          headers: {
+            'Content-type': 'application/json',
+            'X-RapidAPI-Key':
+              '8f5e336038mshcd06dae28b963c7p1b844ajsn7d8370c56522',
+            'X-RapidAPI-Host': 'rawg-video-games-database.p.rapidapi.com',
+          },
+        }
+      );
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   useEffect(() => {
-    renderData();
-  }, []);
-
-  const fileterData = data.filter((items) => {
-    if (category === 'All') {
-      return items;
-    }
-    return items.category === category;
+    getData();
   });
 
   return (
     <S.Grid>
-      {data ? (
+      {/* {data ? (
         category ? (
           fileterData.map((items) => (
             <Card key={items.id} items={items} category={category} />
@@ -38,7 +56,7 @@ function CardList({ category }) {
         )
       ) : (
         <h1>Loading...</h1>
-      )}
+      )} */}
     </S.Grid>
   );
 }

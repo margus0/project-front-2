@@ -4,28 +4,15 @@ import styled from 'styled-components';
 export const Header = styled.header`
   display: flex;
   align-items: center;
-  left: 10rem;
   justify-content: space-between;
   padding: 2rem;
   position: fixed;
-  width: 80%;
-  background-color: rgba(0, 0, 0, 0.75);
-  z-index: 999;
+  background-color: #000000de;
+  width: calc(100% - 4rem);
+  z-index: 10;
 
-  @media screen and (max-width: 1400px) {
-    left: 7rem;
-  }
-
-  @media screen and (max-width: 1200px) {
-    left: 5rem;
-  }
-
-  @media screen and (max-width: 580px) {
-    left: 3rem;
-  }
-
-  @media screen and (max-width: 450px) {
-    left: 1.5rem;
+  li {
+    list-style: none;
   }
 
   @media screen and (max-width: 1000px) {
@@ -35,6 +22,7 @@ export const Header = styled.header`
 
     li {
       display: none;
+      list-style: none;
     }
 
     a.menu {
@@ -54,8 +42,7 @@ export const Header = styled.header`
       width: 75vw;
     }
 
-    @media screen and (max-width: 425px) {
-      left: 2rem;
+    @media screen and (max-width: 426px) {
       width: 65vw;
     }
   }
