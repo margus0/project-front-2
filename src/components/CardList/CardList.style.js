@@ -6,8 +6,9 @@ export const Grid = styled.div`
   gap: 1rem;
   grid-template-columns: repeat(4, 1fr);
   position: relative;
+  top: 15rem;
   text-align: center;
-  top: 20rem;
+  padding: 0 4rem;
 
   h1 {
     position: relative;

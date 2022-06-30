@@ -2,29 +2,46 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   background: ${(props) => props.color};
-  color: #ffffff;
+  color: inherit;
   border-radius: 0.5rem;
-  width: 35%;
-  padding: 2rem;
-  margin: 12rem auto;
+  padding: 6vh;
+  margin: 20vh auto;
+  font-size: 2vh;
+  width: 75vh;
 
-  @media screen and (max-width: 504px) {
-    background-color: inherit;
-    text-align: center;
-    margin: 10rem auto;
+  a {
+    color: inherit;
+  }
 
-    h2 {
-      font-size: 2rem;
-    }
+  h2 {
+    font-size: 4vh;
 
-    a {
-      color: black;
-      text-decoration: none;
+    @media screen and (max-width: 426px) {
+      font-size: 5vh;
     }
   }
 
-  @media screen and (max-width: 992px) {
-    /* font-size: 0.75rem; */
-    width: 60%;
+  @media screen and (max-width: 768px) {
+    width: 50vw;
+  }
+
+  @media screen and (max-width: 426px) {
+    width: 65vw;
+    background-color: inherit;
+    text-align: center;
+    font-size: 5vw;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid #ffffff;
+    }
+    button {
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 8vw;
+    }
   }
 `;
