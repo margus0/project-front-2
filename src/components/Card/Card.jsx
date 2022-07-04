@@ -27,10 +27,15 @@ function Card({ items }) {
   return (
     <S.Card>
       {error && <span style={{ color: 'green' }}>{error}</span>}
-      <h3 key={items.id}>{items.name}</h3>
-      <img src={items.img} alt={items.name} />
-      <p>{items.category}</p>
-      <p>{items.price + '$'}</p>
+      <div>
+        <img src={items.img} alt={items.name} />
+      </div>
+      <div>
+        <h3 key={items.id}>{items.name}</h3>
+        <p>{items.category}</p>
+        <p>{items.price + '$'}</p>
+      </div>
+
       <Button
         type='submit'
         color='primary'

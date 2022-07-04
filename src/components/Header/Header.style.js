@@ -5,10 +5,10 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 2vw;
   position: fixed;
   background-color: #000000de;
-  width: calc(100% - 4rem);
+  width: calc(100% - 4vw);
   z-index: 10;
 
   li {
@@ -16,10 +16,6 @@ export const Header = styled.header`
   }
 
   @media screen and (max-width: 1000px) {
-    button.sc-bczRLJ {
-      display: none;
-    }
-
     li {
       display: none;
       list-style: none;
@@ -36,14 +32,13 @@ export const Header = styled.header`
     a.menu:hover {
       background-color: white;
       color: #6c11b7;
+      transition: ease-in 0.2s;
     }
+  }
 
-    @media screen and (max-width: 900px) {
-      width: 75vw;
-    }
-
-    @media screen and (max-width: 426px) {
-      width: 65vw;
+  @media screen and (max-width: 1000px) {
+    button:nth-child(2) {
+      display: none;
     }
   }
 `;

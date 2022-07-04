@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import propTypes from 'prop-types';
 import * as S from './CartItem.style';
 
 function CartItem({ items, reload }) {
-  const [value, setValue] = useState('1');
-
   const deleteItem = async (id) => {
     try {
       const resp = await fetch(`${process.env.REACT_APP_URL}/auth/cart/${id}`, {
@@ -25,18 +23,11 @@ function CartItem({ items, reload }) {
 
   return (
     <S.Card>
+      <img src={items.image} alt={items.name} />
       <S.Div>
-        <h3 key={items.id}>{items.name}</h3>
-        <img src={items.image} alt={items.name} />
+        <h4 key={items.id}>{items.name}</h4>
         <p>{items.price + '$'}</p>
       </S.Div>
-      <input
-        type='number'
-        value={value}
-        min='1'
-        max='99'
-        onChange={(e) => setValue(e.target.value)}
-      ></input>
       <i className='fa fa-trash' onClick={() => deleteItem(items.id)}></i>
     </S.Card>
   );

@@ -23,7 +23,7 @@ const Header = ({ find }) => {
   return (
     <S.Header>
       <Navigation links={links} find={find} />
-      <Button className='logout' type='button' color='primary' onClick={logout}>
+      <Button type='button' color='primary' id='logout' onClick={logout}>
         Logout
       </Button>
       {block && (
@@ -38,7 +38,7 @@ const Header = ({ find }) => {
           </S.Button>
         </S.MenuDiv>
       )}
-      <S.Menu className='menu' onClick={handleClick}>
+      <S.Menu block={block} className='menu' onClick={handleClick}>
         <i className='fa fa-bars'></i>
       </S.Menu>
     </S.Header>

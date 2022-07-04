@@ -8,9 +8,9 @@ export const Button = styled.button`
   box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);
   color: ${(props) => (props.color === 'primary' ? 'white' : 'red')};
   cursor: pointer;
-  font-size: 2.5vh;
+  font-size: 1.1vw;
   font-weight: bold;
-  padding: 1.5vh 4vh;
+  padding: 0.75vw 2vw;
   text-transform: capitalize;
   margin: 0.5vh 0;
 
@@ -20,8 +20,17 @@ export const Button = styled.button`
     transition: ease 0.2s;
   }
 
-  @media screen and (max-width: 426px) {
-    font-size: 2.5vh;
-    padding: 1vh 0;
+  @media screen and (max-width: 1440px) {
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 2vh;
+    padding: 2vh 4vh;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 2vw 4vw;
   }
 `;
