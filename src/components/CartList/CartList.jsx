@@ -19,14 +19,6 @@ function CartList({ totalPrice }) {
     return resp;
   }
 
-  // const totalPrice = async (data) => {
-  //   let arr = [];
-  //   let initVal = 0;
-  //   await data.map((e) => arr.push(parseInt(e.price)));
-  //   const total = arr.reduce((prev, curent) => curent + prev, initVal);
-  //   seTcartTotal(total);
-  // };
-
   useEffect(() => {
     renderData();
   }, []);

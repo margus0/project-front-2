@@ -25,8 +25,8 @@ const Cart = () => {
         <Button type='button' color='primary' onClick={handleClick}>
           Go back
         </Button>
-        <CartList totalPrice={totalPrice} />
         <p className='total'>Total:{cartTotal}$</p>
+        <CartList totalPrice={totalPrice} />
       </>
     </S.StyledPage>
   );
