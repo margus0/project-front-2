@@ -50,6 +50,10 @@ const Register = () => {
 
     const resp = await postData('register', userData);
 
+    if (resp.msg.includes('Registration successful')) {
+      return navigate('/login');
+    }
+
     if (resp.err.includes('Duplicate')) {
       setloading(false);
       setError(true);
@@ -66,10 +70,6 @@ const Register = () => {
       setloading(false);
       setError(true);
       return setErrorText('Password is required');
-    }
-
-    if (resp.msg.includes('Registration successful')) {
-      return navigate('/login');
     }
   }
 
