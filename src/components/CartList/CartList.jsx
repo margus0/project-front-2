@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import CartItem from '../CartItem/CartItem';
 import * as S from './CartList.style';
+import PropTypes from 'prop-types';
 import { getData } from '../../utils/helper';
 
-function CartList() {
+function CartList({ totalPrice }) {
   const [data, setData] = useState([]);
+
   const [loading, setLoading] = useState(false);
 
   async function renderData() {
@@ -12,9 +14,19 @@ function CartList() {
     const token = localStorage.getItem('token');
     const resp = await getData('auth/cart ', token);
     setLoading(false);
+    totalPrice(resp.data);
     setData(resp.data);
     return resp;
   }
+
+  // const totalPrice = async (data) => {
+  //   let arr = [];
+  //   let initVal = 0;
+  //   await data.map((e) => arr.push(parseInt(e.price)));
+  //   const total = arr.reduce((prev, curent) => curent + prev, initVal);
+  //   seTcartTotal(total);
+  // };
+
   useEffect(() => {
     renderData();
   }, []);
@@ -37,5 +49,9 @@ function CartList() {
     </S.List>
   );
 }
+
+CartList.propTypes = {
+  totalPrice: PropTypes.any,
+};
 
 export default CartList;

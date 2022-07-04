@@ -18,6 +18,7 @@ const Navigation = ({ links, find }) => {
     { id: 5, name: 'RPG' },
     { id: 6, name: 'All' },
   ];
+
   find(category);
   return (
     <S.StyledNav>

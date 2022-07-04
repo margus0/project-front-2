@@ -2,29 +2,29 @@ import styled from 'styled-components';
 
 export const Grid = styled.div`
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
   color: white;
   gap: 1rem;
-  grid-template-columns: repeat(4, 1fr);
+  padding-left: 2rem;
+  padding-right: 2rem;
   position: relative;
-  top: 15rem;
+  top: 20vw;
   text-align: center;
-  padding: 0 4rem;
-
-  h1 {
-    position: relative;
-    top: 5rem;
-    left: 40rem;
-  }
 
   @media screen and (max-width: 1400px) {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1000px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
+    top: 20vh;
+  }
+
+  @media screen and (max-width: 426px) {
+    padding: 0;
   }
 `;

@@ -7,10 +7,11 @@ export const Card = styled.div`
   text-align: center;
   color: white;
   position: relative;
+  font-size: 1rem;
 
-  h3 {
+  h4 {
+    width: 20rem;
     margin: 1rem auto;
-    max-width: 20rem;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -18,37 +19,32 @@ export const Card = styled.div`
 
   img {
     border: 1px solid white;
-    height: 12rem;
-    width: 17rem;
+    height: 12vw;
+    width: 18vw;
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 768px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
     width: 80vw;
-  }
-
-  @media screen and (max-width: 865px) {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-
-    p {
-      margin: 0;
-    }
+    font-size: 2vw;
+    margin: 0 auto;
 
     img {
-      height: 15rem;
+      height: 20vw;
+      width: 30vw;
+      min-height: 6rem;
+      min-width: 6rem;
     }
   }
 
-  @media screen and (max-width: 580px) {
-    padding: 0;
+  @media screen and (max-width: 425px) {
+    font-size: 2.5vw;
   }
 
-  @media screen and (max-width: 580px) {
-    left: -1rem;
+  @media screen and (min-width: 1440px) {
+    font-size: 1vw;
   }
 `;
