@@ -4,6 +4,7 @@ import * as S from './Header.style';
 import Navigation from '../Navigation/Navigation';
 import Button from '../Button/Button';
 import AuthContext from '../../AuthContext';
+import SearchBar from '../SearchBar/SearchBar';
 
 const links = [
   { id: 1, title: 'Home', to: '/' },
@@ -23,6 +24,7 @@ const Header = ({ find }) => {
   return (
     <S.Header>
       <Navigation links={links} find={find} />
+      <SearchBar />
       <Button type='button' color='primary' id='logout' onClick={logout}>
         Logout
       </Button>
