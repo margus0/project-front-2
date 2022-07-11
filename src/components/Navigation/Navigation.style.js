@@ -8,7 +8,7 @@ export const StyledLink = styled(Link)`
   font-size: 1rem;
   cursor: pointer;
   :hover {
-    box-shadow: 0px 0px 10px 10px #6c11b7;
+    box-shadow: 0px 0px 5px 5px #6c11b7;
     background-color: #6c11b7;
   }
 
@@ -21,14 +21,17 @@ export const DropNav = styled.ul`
   display: flex;
   flex-direction: column;
   position: absolute;
-  right: 11em;
-  top: 1rem;
+  left: 10rem;
+  top: 1vw;
+  background-color: #000000de;
+  padding: 0;
 
-  @media screen and (min-width: 1440px) {
-    top: 1vw;
+  @media screen and (max-width: 1920px) {
+    left: 7rem;
   }
-  @media screen and (min-width: 2560px) {
-    right: 15rem;
+
+  @media screen and (min-width: 1920px) {
+    left: 8rem;
   }
 
   @media screen and (min-width: 1000px) {
@@ -44,14 +47,15 @@ export const DropList = styled.li`
   font-size: 0.75rem;
   cursor: pointer;
   line-height: 2vw;
+  padding: 0 2vw;
+
+  &:hover {
+    background-color: #6c11b7;
+    transition: ease 0.2s;
+  }
 
   @media screen and (min-width: 1440px) {
     font-size: 0.8vw;
-  }
-
-  :hover {
-    color: #6c11b7;
-    transition: ease 0.3s;
   }
 `;
 
