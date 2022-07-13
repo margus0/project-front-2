@@ -50,6 +50,8 @@ export const Card = styled.div`
   }
 
   .description {
+    margin: 2vw auto;
+    font-size: 1.2rem;
     animation: 2s anim-lineUp ease-out;
     @keyframes anim-lineUp {
       0% {
