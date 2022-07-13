@@ -51,6 +51,8 @@ export const Card = styled.div`
 
   .description {
     animation: 2s anim-lineUp ease-out;
+    margin: 2vw auto;
+    font-size: 1.2rem;
     @keyframes anim-lineUp {
       0% {
         opacity: 0;
