@@ -5,6 +5,14 @@ import Button from '../Button/Button';
 import { useNavigate } from 'react-router-dom';
 
 function Card({ items }) {
+  const [hover, setHover] = useState(false);
+  const onHover = () => {
+    setHover(true);
+  };
+
+  const onLeave = () => {
+    setHover(false);
+  };
   let navigate = useNavigate();
   const [error, setError] = useState();
   const insertToCart = async (id) => {
@@ -25,17 +33,22 @@ function Card({ items }) {
   };
 
   return (
-    <S.Card>
+    <S.Card onMouseEnter={onHover} onMouseLeave={onLeave}>
       {error && <span style={{ color: 'green' }}>{error}</span>}
-      <div>
-        <img src={items.img} alt={items.name} />
-      </div>
-      <div>
-        <h3 key={items.id}>{items.name}</h3>
-        <p>{items.category}</p>
-        <p>{items.price + '$'}</p>
-      </div>
-
+      {hover ? (
+        <div className='description'>{items.description}</div>
+      ) : (
+        <>
+          <div>
+            <img src={items.img} alt={items.name} />
+          </div>
+          <div>
+            <h3 key={items.id}>{items.name}</h3>
+            <p>{items.category}</p>
+            <p>{items.price + '$'}</p>
+          </div>
+        </>
+      )}
       <Button
         type='submit'
         color='primary'

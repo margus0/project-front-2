@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: rgba(0, 0, 0, 0.75);
   border-radius: 3px;
   padding: 1rem;
@@ -23,6 +26,12 @@ export const Card = styled.div`
     width: 18vw;
   }
 
+  button {
+    position: relative;
+    width: 40%;
+    margin: 0 auto;
+  }
+
   @media screen and (max-width: 768px) {
     display: flex;
     justify-content: space-between;
@@ -37,6 +46,27 @@ export const Card = styled.div`
       width: 30vw;
       min-height: 6rem;
       min-width: 6rem;
+    }
+  }
+
+  .description {
+    animation: 2s anim-lineUp ease-out;
+    @keyframes anim-lineUp {
+      0% {
+        opacity: 0;
+        transform: translateY(80%);
+      }
+      20% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
     }
   }
 
