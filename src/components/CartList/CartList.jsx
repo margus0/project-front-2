@@ -6,7 +6,6 @@ import { getData } from '../../utils/helper';
 
 function CartList({ totalPrice }) {
   const [data, setData] = useState([]);
-
   const [loading, setLoading] = useState(false);
 
   async function renderData() {
