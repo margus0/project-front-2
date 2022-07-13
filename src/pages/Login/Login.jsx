@@ -34,7 +34,7 @@ const Login = () => {
     if (password.length < 5) {
       setloading(false);
       setError(true);
-      return setErrorText('Password too, is too short');
+      return setErrorText('Password is too short');
     }
 
     const resp = await postData('login', userData);

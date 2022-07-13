@@ -37,7 +37,7 @@ export const Header = styled.header`
   }
 
   @media screen and (max-width: 1000px) {
-    button:nth-child(2) {
+    button.sc-bczRLJ {
       display: none;
     }
   }
