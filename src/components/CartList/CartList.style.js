@@ -9,7 +9,7 @@ export const List = styled.div`
   gap: 1rem;
   margin: 0 auto;
   max-height: 100%;
-  min-height: 20vw;
+  min-height: 12vw;
   position: relative;
   text-align: center;
   top: 10rem;
@@ -20,7 +20,7 @@ export const List = styled.div`
   }
 
   h1 {
-    margin-top: 10vw;
+    margin-top: 5vw;
   }
 
   @media screen and (max-width: 880px) {
