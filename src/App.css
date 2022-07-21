@@ -4,9 +4,3 @@ html {
   background-image: url(assets/background2.jpg);
   background-size: cover;
 }
-
-@media screen and (max-width: 426px) {
-  html {
-    background-size: contain;
-  }
-}

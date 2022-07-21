@@ -7,8 +7,8 @@ import { postData } from '../../utils/helper';
 import AuthContext from '../../AuthContext';
 
 const Login = () => {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [error, setError] = useState(false);
   const [errorText, setErrorText] = useState();
   const [loading, setloading] = useState(false);

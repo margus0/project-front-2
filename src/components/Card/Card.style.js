@@ -10,6 +10,7 @@ export const Card = styled.div`
   text-align: center;
   color: white;
   position: relative;
+  min-height: 25vw;
   font-size: 1rem;
 
   h4 {
@@ -39,11 +40,12 @@ export const Card = styled.div`
     gap: 1rem;
     width: 80vw;
     font-size: 2vw;
-    margin: 0 auto;
+    margin: 5rem auto;
+    height: 50vw;
 
     img {
-      height: 20vw;
-      width: 30vw;
+      height: 23vw;
+      width: 40vw;
       min-height: 6rem;
       min-width: 6rem;
     }
@@ -53,6 +55,8 @@ export const Card = styled.div`
     margin: 2vw auto;
     font-size: 1.2rem;
     animation: 2s anim-lineUp ease-out;
+    margin: 2vw auto;
+    font-size: 1.2rem;
     @keyframes anim-lineUp {
       0% {
         opacity: 0;
